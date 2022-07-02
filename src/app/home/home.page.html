@@ -1,18 +1,26 @@
 <ion-header>
   <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button fill="clear" color="medium">
+        <ion-icon slot="icon-only" name="settings-sharp"></ion-icon>
+      </ion-button>
+    </ion-buttons>
     <ion-title>
-      Ionic Form
+      <img class="logo" src="https://zupimages.net/up/22/26/bcjb.png">
     </ion-title>
+    <ion-buttons slot="end">
+      <ion-button fill="clear" color="medium">
+        <ion-icon slot="icon-only" name="chatbubbles-sharp"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 <ion-content class="auth-form">
   <ion-grid>
     <ion-row>
       <ion-col align-self-center>
-        <ion-button [routerLink]="['/register']" expand="block" color="primary">Register</ion-button>
-        <span class="divider line one-line">or</span>
-        <span class="already">Already a user?</span>
-        <ion-button [routerLink]="['/login']" expand="block" color="danger">Sign In</ion-button>
+        <ion-button [routerLink]="['/register']" expand="block" color="primary">Créer un compte</ion-button>
+        <ion-button [routerLink]="['/login']" expand="block" color="danger">Me connecter</ion-button>
       </ion-col>
     </ion-row>
   </ion-grid>

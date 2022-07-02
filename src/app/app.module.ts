@@ -1,3 +1,4 @@
+import { SwipeCardLibModule } from 'ng-swipe-card';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouteReuseStrategy } from '@angular/router';
@@ -6,6 +7,8 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { environment } from '../environments/environment';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
+
 // Auth service
 import { AuthService } from './shared/services/auth.service';
 
@@ -15,8 +18,12 @@ import { AngularFireStorageModule } from '@angular/fire/compat/storage';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 
+// Component
+import { SwipeComponent } from '@pages';
+
+
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, SwipeComponent],
   imports: [
     BrowserModule,
     IonicModule.forRoot(),
@@ -28,6 +35,8 @@ import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
     AngularFirestoreModule,
     AngularFireStorageModule,
     AngularFireDatabaseModule,
+    SwipeCardLibModule,
+    CommonModule,
   ],
   providers: [
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
